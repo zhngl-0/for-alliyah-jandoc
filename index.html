@@ -142,49 +142,31 @@
   </div>
 
   <script>
-    const correctCode = "122425"; // Normal unlock code
-    const cheatCode = "567899";   // Cheat code: bypass date restriction
+  const correctCode = "122425"; // 🔐 Only unlock code
 
-    // ❌ False / playful incorrect messages (if needed, could add)
-    const fakeErrors = [
-      "Oops, try again 💙",
-      "Not yet 😉",
-      "Almost, but not quite 😅",
-      "Keep trying, you got this 💌"
-    ];
+  const fakeErrors = [
+    "Oops, try again 💙",
+    "Not yet 😉",
+    "Almost, but not quite 😅",
+    "Keep trying, you got this 💌"
+  ];
 
-    function unlock() {
-      const input = document.getElementById("code").value;
-      const errorText = document.getElementById("errorText");
+  function unlock() {
+    const input = document.getElementById("code").value;
+    const errorText = document.getElementById("errorText");
 
-      // 🎮 CHEAT CODE (works any day)
-      if(input === cheatCode){
-        document.getElementById("lock").style.display = "none";
-        document.getElementById("message").style.display = "block";
-        return;
-      }
-
-      // DATE CHECK (only normal users)
-      const today = new Date();
-      const month = today.getMonth(); // Dec = 11
-      const day = today.getDate();
-
-      if(month === 11 && day <= 24 && input === correctCode){
-        errorText.textContent = "Not yet! Wait for the right time.";
-        errorText.style.display = "block";
-        return;
-      }
-
-      // NORMAL CODE CHECK
-      if(input === correctCode){
-        document.getElementById("lock").style.display = "none";
-        document.getElementById("message").style.display = "block";
-      } else {
-        errorText.textContent = fakeErrors[Math.floor(Math.random() * fakeErrors.length)];
-        errorText.style.display = "block";
-      }
+    if (input === correctCode) {
+      document.getElementById("lock").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    } else {
+      errorText.textContent =
+        fakeErrors[Math.floor(Math.random() * fakeErrors.length)];
+      errorText.style.display = "block";
     }
-  </script>
+  }
+</script>
+
 
 </body>
 </html>
+
