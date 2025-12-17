@@ -1,99 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>For You</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>For Alliyah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts for romantic, friendly vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       min-height: 100vh;
-      background: linear-gradient(135deg, #f8cdda, #f2a7c2);
-      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #a3c4f3, #d2e4fc);
+      font-family: 'Quicksand', sans-serif;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       padding: 20px;
+      color: #1a2c4a;
     }
 
-    .letter {
-      background: #fff;
-      max-width: 700px;
-      padding: 50px 40px;
+    .card {
+      background: #fefefe;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      animation: fadeIn 1.5s ease;
+      padding: 36px 32px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 0.8s ease;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
+      font-family: 'Playfair Display', serif;
       font-weight: normal;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
+      margin-bottom: 14px;
+      color: #2d3a6b;
     }
 
     p {
-      line-height: 1.8;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
       font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-
-    .signature {
-      margin-top: 40px;
-      text-align: right;
-      font-style: italic;
-    }
-
-    .heart {
+      border-radius: 10px;
+      border: 2px solid #b2d1f0;
       text-align: center;
-      font-size: 2rem;
-      margin-top: 20px;
-      animation: pulse 1.8s infinite;
+      letter-spacing: 6px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background: #6fa1f2;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    button:hover {
+      background: #5b8ee1;
+    }
+
+    .error {
+      color: #b23a4c;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .message {
+      display: none;
+      text-align: left;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(1.15); }
-      100% { transform: scale(1); }
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="letter">
-    <h1>My Love</h1>
-
-    <p>
-      If you’re reading this, then you followed a small square of pixels
-      into something very real. I wanted you to have a place where my
-      words could stay, where time wouldn’t rush them.
-    </p>
-
-    <p>
-      Loving you has taught me patience, courage, and caringall at once.
-      You are my calm in loud days, my laughter in quiet ones, and the
-      person I choose, again and again.
-    </p>
-
-    <p>
-      This letter can change, grow, and carry more memories, just like us.
-      But what won’t change is this: my heart knows where it belongs.
-    </p>
-
-    <div class="signature">
-      Always yours,<br />
-      — Your Husband
-    </div>
-
-    <div class="heart">♥</div>
+  <!-- LOCK SCREEN -->
+  <div class="card" id="lock">
+    <h1>Enter the Secret Code</h1>
+    <p>This message is meant for you, Alliyah 💙</p>
+    <input type="password" id="code" maxlength="6" placeholder="••••••">
+    <button onclick="unlock()">Enter</button>
+    <div class="error" id="errorText"></div>
   </div>
+
+  <!-- MESSAGE -->
+  <div class="card message" id="message">
+    <h1>Dear Alliyah,</h1>
+
+    <p>Hey! I'm glad you had the time to scan the QR code. A very happy Christmas to you and your loved ones. I hope that you will truly enjoy your summer break and fully embrace the rest you need. But the very important part, happy 365 days with you, Alliyah ko. Just a while ago, my heart was so fuzzy. I was just blasting songs on my ear and began thinking about how the future will shape out when I'm with you. Although it was heartwarming for me, it was a realization that you are so special in my heart.</p>
+
+    <p>To be honest, I was never a fan of dates. I never got out with any ex of mine and got home with enjoyment. I was never a fan of video calls. Usually, mga kaibigan ko lang katawag ko, and I think the maximum time I got on a call with someone was just around 30 minutes. Minsan pa nga, eh, iniiwasan ko pa yung mga group video calls. I was always effortless and not conscious of what I did before. Minsan, I never took any effort at all to buy gifts or any material as an appreciation. And I was also careless with what I do—ugali, physical appearance, emotional intelligence, and many more aspects. Before, wala akong pake sa kalokohan ko at hinahayaan ko lang lumubog ako sa kawalan ng self-care at self-control. I was never a fan of Enhypen before; in fact, I hated it because my cousins would blast it on the TV every time they came over.</p>
+
+    <p>I didn't know that since the day I met you, the course of my life would reverse. I had the habit of going out not only with you, but with my friends and relatives. I enjoyed the thought of quality time—it became a love language. I loved having a great time with everyone, especially you. Instead of constant texting and having an avoidance in video calls, I was now the one who always initiated video calls to everyone at any time. Instead of being selfless and ignorant about who I am, I am always careful and mature about my habits and decisions. It's funny that when it comes to you, I built a habit that I should look good, or even decent, in front of you. Tama ba suot ko? May eye bags ba 'ko? Gulo-gulo ba buhok ko? Mabaho ba ako? Nakapag-perfume ba 'ko? Nag-toothbrush ba 'ko? Don't act dumb. Don't be clumsy. Listen to what she'll say. Those were some of the questions and instructions that would always revolve around my mind when we're bound to meet each other. And then, I made a personal Spotify playlist that contained all Enhypen songs na naririnig ko palagi at bagay sa music taste ko. At oo nga pala, Polaroid Love hilig ko. Mainstream nga lang pero, pake ko?</p>
+
+    <p>You changed me, not for the worse. You changed me to become the man I was looking forward to. You changed me to be a better version of myself. You changed me into something that would totally flip my old, careless persona. You gave me a reason to care deeply for myself, not just about you, but about who I am when I'm with you or not. I remember myself a year ago, so devastated and weak. But ever since you came into my life, hindi ko masukat sa kamay yung laki ng pinagbago ko dahil lang sa'yo.</p>
+
+    <p>1 Corinthians 13:4 states that love is patient and kind. I never felt anyone this patient and kind to me since the beginning of time. Mahal ko, maraming salamat sa araw-araw na pagsuporta sa akin sa araw-araw na pamumuhay ko. Maraming salamat na kahit nahihirapan ako palagi na itayo ang sarili ko, fighting for myself and standing back up after being bombarded my problems and issues, you helped me get up. You gave me love that I very much needed. Sa kabila rin ng problema, mahal, maraming salamat dahil hindi ka sumuko sa atin. Maraming salamat na kahit tayo pang parehas ang nasasaktan, you remained loving and strong to fix me, to fix us. You are indeed what I prayed God for. Sa kabila ng sandamakmak kong pagrereklamo and walang katapusang rants, you kept me safe and made me felt genuinely understood. Thank you for staying by my side, baby. Thank you na kahit pa mukhang ang buong mundo ang kontra sa akin, hindi ka natakot na protektahan at manatili sa tabi ko, handang tulungan ako sa anumang panahon.</p>
+
+    <p>Hindi ko na ma-enumerate pa lahat ng mga araw na kasama kita at mga moments na ikinagalak ko. Prom night, sa araw-araw na kulitan sa hallway ng building, sa mga araw na maglalakad tayo pauwi at kung ano mang katarantaduhan ang ipapakita, kulitan sa classroom, yung araw na muntik na tayong mag-SMF, gala sa BGC, the first kiss sa photo studio, yung parehas nating pag-panic sa "Sparks and Spectacles", yung pag-laro natin sa Roblox ng "Together", yung time na nahuli ni Sir Rex na magkasama tayo, yung midnight calls natin, yung muntikan na nating magawa yung 24-hour record na VC pero sayang dahil 15 hours lang itinagal, yung pa-surprise birthday celebration mo when you popped out of the box HAHAHAHA, the exchanging of phones during class hours, at walang katapusang jokes natin sa isa't isa na hindi ko man matandaan, pero ramdam ko lahat yun sa puso ko. Oo, baby ko, tandang-tanda ko pa rin lahat ng mga ito, and I truly appreciate it and will always treasure it forever. I hope that in the many days that will crash, mas marami pa tayong kasiyahan at pagmamahalan (lalo na pagmamahalan heh).</p>
+
+    <p>Bagong taon na naman tayo next year, another 365 days before the 2nd anniversary comes. I truly hope that you stay on my side and live with me through every moment, whether happy or sad. I also hope na we support each other's dreams in the future, advance mag-isip eh 'no? HAHAHAHAHAHA. Moreover, I wish that we could also handle our conflicts better. Hindi natin maaalis sa relationship natin ang problem, but I wish that we could remove the forced distancing, lack of communication, and the way we speak offensively to each other during the worst of times. Just so you know, I would vow to not give up on you or never even think of that decision whenever we would have an argument. I could never let go of someone whom I truly treasured and was fully committed to.</p>
+
+    <p>Alam mo, baby, there are moments when I catch myself smiling for no reason, and when I trace it back, ikaw pala ang dulo ng isip ko. Kahit sa mga simpleng araw, sa mga oras na walang espesyal na nangyayari, ikaw pa rin ang pahinga ng utak ko. You became the calm after long days, the thought I return to when the world feels loud. Sa gitna ng pagod, sa gitna ng kalituhan, ikaw ang nagpapaalala sa akin na may uuwian akong pagmamahal.</p>
+
+    <p>I love the way you exist in my life, not loudly, not forcefully, but gently. The way you listen, the way you care even when you’re tired, the way you still choose kindness even when things are hard. You make love feel safe. You make it feel steady. And in a world where everything feels temporary, you feel like something I want to protect, nurture, and keep choosing every single day.</p>
+
+    <p>If someday we grow tired, if someday the days feel heavier than usual, I hope you remember this version of us. The version that laughed endlessly, loved honestly, and held on even when things weren’t perfect. I hope you remember that loving you was never a burden to me, never a question, never a doubt. It was, and always will be, a decision I make with a full heart.</p>
+
+    <p>I don’t promise perfection, baby. I promise presence. I promise effort. I promise to listen, to learn, and to grow with you. I promise to embrace you through victories and through failure, through laughter and through tears.</p>
+
+    <p>Laban ka rin, Alli! Next year ay DSPC na. Bagama't di kita matutulungan sa mga technicalities and concepts d'yan sa mga pinagsususulat mo, just know that I'll support you along the way and continue to help you with whatever struggle you may face. Alam kong masyado akong demonyo pag sinasabi kong "buti pa ko, nagpapahinga." Pero remember that you also need it, too. In general na rin siguro, I hope that you always take care of yourself and not be afraid to say no pag alam mo ang tatahakin mo ay hindi para sa'yo o hamak sa'yo.</p>
+
+    <p>These words are far beyond what I feel for you, Alliyah ko. Sobrang dami ko pang gustong sabihin pero dahil marami na tayong naisulat sa buhay natin sa sarili nating mundo, hindi ko na kayang i-iisa-isa pa ang mga 'yon. Pero sana tandaan mo na palagi kitang mamahalin sa bawa't segundo hangga't sa araw na kunin na ako ng langit. Iyang mga nasa box na yan na lyrics? Alam mo, tuwing naririnig ko 'yan, ikaw bigla ang naaalala ko, dahil hindi lang relatable kundi dahil din sa sobrang pagnanais ko sa'yo na mahalin ka. Maraming salamat, Alliyah. Maraming salamat na pinakita mo sa'kin at pinaramdam mo sa akin ang true love. Maraming salamat na sa bawa't pagbagsak ko, hindi ka napagod na i-angat ako at bigyan ng lakas na lumaban at mabuhay. You are forever my stength, my joy, my love, and my Alliyah. You are indeed the best thing that ever happened to me. Sa mas marami pang araw.</p>
+
+
+    <p>"Mananatili na sa piling mo<br>
+    Mundo'y magiging ikaw."</p>
+
+    <p>Ang iyong sinisinta,<br>
+    David B.</p>
+
+    <p style="opacity: 0.7;">P.S: (Pangit pala nung ginawa ko sa box, first time lang kasi gumawa n'yan, hehe.)</p>
+  </div>
+
+  <script>
+    const correctCode = "122425"; // Normal unlock code
+    const cheatCode = "567899";   // Cheat code: bypass date restriction
+
+    // ❌ False / playful incorrect messages (if needed, could add)
+    const fakeErrors = [
+      "Oops, try again 💙",
+      "Not yet 😉",
+      "Almost, but not quite 😅",
+      "Keep trying, you got this 💌"
+    ];
+
+    function unlock() {
+      const input = document.getElementById("code").value;
+      const errorText = document.getElementById("errorText");
+
+      // 🎮 CHEAT CODE (works any day)
+      if(input === cheatCode){
+        document.getElementById("lock").style.display = "none";
+        document.getElementById("message").style.display = "block";
+        return;
+      }
+
+      // DATE CHECK (only normal users)
+      const today = new Date();
+      const month = today.getMonth(); // Dec = 11
+      const day = today.getDate();
+
+      if(month === 11 && day <= 24 && input === correctCode){
+        errorText.textContent = "Not yet! Wait for the right time.";
+        errorText.style.display = "block";
+        return;
+      }
+
+      // NORMAL CODE CHECK
+      if(input === correctCode){
+        document.getElementById("lock").style.display = "none";
+        document.getElementById("message").style.display = "block";
+      } else {
+        errorText.textContent = fakeErrors[Math.floor(Math.random() * fakeErrors.length)];
+        errorText.style.display = "block";
+      }
+    }
+  </script>
 
 </body>
 </html>
-
