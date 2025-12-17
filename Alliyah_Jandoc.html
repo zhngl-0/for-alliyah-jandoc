@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f8cdda, #f2a7c2);
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .letter {
+      background: #fff;
+      max-width: 700px;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: normal;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-style: italic;
+    }
+
+    .heart {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 20px;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="letter">
+    <h1>My Love</h1>
+
+    <p>
+      If you’re reading this, then you followed a small square of pixels
+      into something very real. I wanted you to have a place where my
+      words could stay, where time wouldn’t rush them.
+    </p>
+
+    <p>
+      Loving you has taught me patience, courage, and softness all at once.
+      You are my calm in loud days, my laughter in quiet ones, and the
+      person I choose, again and again.
+    </p>
+
+    <p>
+      This letter can change, grow, and carry more memories, just like us.
+      But what won’t change is this: my heart knows where it belongs.
+    </p>
+
+    <div class="signature">
+      Always yours,<br />
+      — Your Husband
+    </div>
+
+    <div class="heart">♥</div>
+  </div>
+
+</body>
+</html>
